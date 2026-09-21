@@ -1,0 +1,281 @@
+@import url(variables.css);
+
+@font-face {
+    font-family: 'titleFont';
+    src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bodyFont';
+    src: url('../fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* === RESET / BASE === */
+*, *::before, *::after {
+    box-sizing: border-box; 
+    /* Com border-box, o padding fica dentro da borda. O que você define é o tamanho final, sem surpresas. */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'titleFont', serif;
+    font-size: var(--font-size-h1);
+    color: var(--color-primary);
+    text-decoration:none;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* centraliza horizontalmente */
+    justify-content: center;    /* centraliza verticalmente */
+    min-height: 100vh;
+    font-family: 'bodyFont', sans-serif;
+    font-size: var(--font-size-body);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;                               /* top/right/bottom/left: 0 */
+    border: 8px solid var(--color-border);
+    pointer-events: none;                   /* não bloqueia cliques */
+    z-index: 9999;                          /* fica na frente de tudo */
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.page-header-logo {
+    width: 180px;      /* menor que o original — elegante no desktop */
+    height: auto;      /* mantém proporção */
+}
+
+.page-main {
+    margin: 0;
+}
+
+.page-header,
+.page-main,
+.page-footer {
+    width: 100%;
+    max-width: 480px;       /* alinha tudo na mesma coluna */
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-family: 'bodyFont', sans-serif;
+    font-size: var(--font-size-label);
+    color: var(--color-text);
+}
+
+.form-label-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-link {
+    font-size: var(--font-size-label);
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.form-link:hover {
+    color: var(--color-primary);
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-form);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-family: 'bodyFont', sans-serif;
+    font-size: var(--font-size-body)
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input::placeholder {
+    font-size: var(--font-size-placeholder);
+}
+
+/* Remove o ícone nativo de senha do Chrome/Edge */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none;
+}
+
+/* Input com ícone à esquerda (email e senha) */
+.form-input-wrapper .form-input {
+    padding-left: 44px;
+}
+
+/* Input com ícone à esquerda e à direita (senha: cadeado + olho) */
+#login-password {
+    padding-right: 44px;
+}
+
+.form-icon-first-name, .form-icon-last-name {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icons/icon-profile.svg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+.form-icon-email {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icons/icon-email.svg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+.form-icon-padlock, .form-icon-padlock-confirm {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icons/icon-padlock-closed.svg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+.form-icon-eye, .form-icon-eye-confirm {
+    position: absolute;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('../icons/icon-eye-hidden.svg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+.form-icon-eye:hover, .form-icon-eye-confirm:hover {
+    opacity: 1;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-family: 'bodyFont', sans-serif;
+    font-size: var(--font-size-body);
+    transition: opacity 2s ease;
+}
+
+.btn:hover { 
+    opacity: 0.85;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+/* Ajustar botões inativos para terem a mesma aparência, indicando que estão desabilitados, e quando os campos forem preenchidos, o botão fica ativo para indicar que já pode ser clicado. A funcionalidade de ativar/desativar o botão deve ser implementada em JS, monitorando os campos de email e senha para habilitar o botão somente quando ambos estiverem preenchidos. */
+.btn-submit-login, .btn-submit-signup, .btn-submit-account-recovery {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-primary);
+    color: var(--color-text);
+    width: 100%;
+    opacity: 0.6;
+}
+
+.page-footer-icon-lang {
+    opacity: 0.6;
+}
+
+.page-footer-icon-lang:hover {
+    opacity: 1;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    padding: 16px 24px;
+    margin-top: 60px;
+    margin-bottom: 2vh;
+}
+
+.page-footer-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-link {
+    font-size: var(--font-size-label);
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: var(--color-primary);
+}
+
+
+/* @media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+} */
+
+/* Esconde o elemento com classe sidebar — comum para liberar espaço horizontal em telas pequenas giradas. */
+/* @media screen and (orientation: landscape) {
+    .sidebar {
+        display: none;
+    }
+} */

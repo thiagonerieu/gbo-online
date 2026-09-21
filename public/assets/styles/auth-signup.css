@@ -1,0 +1,26 @@
+body.page-signup .page-main {
+    display: flex;
+    justify-content: center;
+}
+
+body.page-signup .form {
+    width: 100%;
+    max-width: 420px;
+}
+
+.page-header {
+    gap: 32px;
+}
+
+.page-header p {
+    text-align: center;
+    color: var(--color-text-primary);
+}
+
+/* @media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+} */
