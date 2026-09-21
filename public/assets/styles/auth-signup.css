@@ -17,6 +17,13 @@ body.page-signup .form {
     color: var(--color-text-primary);
 }
 
+.form-group-terms {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    gap: 20px;
+}
+
 /* @media screen and (min-width: 768px) {
 
 }

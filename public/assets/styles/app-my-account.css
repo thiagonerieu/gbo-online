@@ -14,6 +14,10 @@ body.page-my-account .form {
     gap: 8px;
 }
 
+h1 {
+    padding-top: 4vh;
+}
+
 .profile-identity {
     display: flex;
     flex-direction: column;
@@ -25,10 +29,6 @@ body.page-my-account .form {
     display: flex;
     flex-direction:row;
     gap: 8px;
-}
-
-h1 {
-    padding-top: 4vh;
 }
 
 .profile-fields {

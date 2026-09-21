@@ -16,11 +16,10 @@
     </header>
     <main class="page-main">
 
-        <form id="form-signup" class="form" method="post" action=""> <!-- Adicionar action = destino do formulário. -->
-        
+        <form id="form-signup" class="form" method="post" action=""> <!-- Adicionar action = destino do formulário. -->        
             <div class="form-group">
                 <div class="form-label-row">
-                    <label class="form-label" for="first-name">Prénom</label>
+                    <label class="form-label" for="signup-first-name">Prénom</label>
                 </div>
                 <div class="form-input-wrapper">
                     <input id="signup-first-name" class="form-input" type="text" name="first-name" placeholder="Votre prénom ici..." maxlength="20" autofocus required>
@@ -31,7 +30,7 @@
 
             <div class="form-group">
                 <div class="form-label-row">
-                    <label class="form-label" for="last-name">Nom</label>
+                    <label class="form-label" for="signup-last-name">Nom</label>
                 </div>
                 <div class="form-input-wrapper">
                     <input id="signup-last-name" class="form-input" type="text" name="last-name" placeholder="Votre nom ici..." maxlength="20" required>
@@ -41,7 +40,7 @@
             
             <div class="form-group">
                 <div class="form-label-row">
-                    <label class="form-label" for="email">E-mail</label>
+                    <label class="form-label" for="signup-email">E-mail</label>
                 </div>
                 <div class="form-input-wrapper">
                     <input id="signup-email" class="form-input" type="email" name="email" placeholder="Votre adresse e-mail ici..." required>
@@ -52,7 +51,7 @@
 
             <div class="form-group">
                 <div class="form-label-row">
-                    <label class="form-label" for="password">Mot de passe</label>
+                    <label class="form-label" for="signup-password">Mot de passe</label>
                 </div>
                 <div class="form-input-wrapper">
                     <input id="signup-password" class="form-input" type="password" name="password"  placeholder="Votre mot de passe ici..." required>
@@ -63,7 +62,7 @@
 
             <div class="form-group">
                 <div class="form-label-row">
-                    <label class="form-label" for="password">Confirmer le mot de passe</label>
+                    <label class="form-label" for="signup-password-confirm">Confirmer le mot de passe</label>
                 </div>
                 <div class="form-input-wrapper">
                     <input id="signup-password-confirm" class="form-input" type="password" name="password-confirm"  placeholder="Confirmez votre mot de passe ici..." required>
@@ -73,14 +72,13 @@
                 </div>
             </div>
             <!-- Inserir box checklist para aceitar os termos de uso e política de privacidade. -->
-            <div class="form-group">
+            <div class="form-group-terms">
+                <input id="signup-checkbox-terms" class="form-checkbox" type="checkbox" name="checkbox-terms" required>
                 <div class="form-checkbox-wrapper">
-                    <input id="signup-checkbox-terms" class="form-checkbox" type="checkbox" name="checkbox-terms" required>
-                    <label class="form-label" for="terms">J'accepte les termes d'utilisation et la politique de confidentialité.</label>
+                    <label class="form-label" for="signup-checkbox-terms">J'accepte les termes d'utilisation et la politique de confidentialité.</label>
                 </div>
             </div>
             <button class="btn btn-submit-signup" type="submit" value="Créer un compte">Créer un compte</button>
-
         </form>
     </main>
     

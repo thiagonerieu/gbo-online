@@ -1,17 +1,6 @@
-body.page-account .page-main {
-    display: flex;
-    justify-content: center;
-}
-
-body.page-my-account .form {
-    width: 100%;
-    max-width: 420px;
-}
-
 .page-main {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 h1 {
