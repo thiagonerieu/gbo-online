@@ -37,9 +37,6 @@ h2 {
     font-family: var(--font-title);
 }
 
-/* hr {
-    row-size: 10px;
-} */
 
 .profile-fields {
     display: flex;

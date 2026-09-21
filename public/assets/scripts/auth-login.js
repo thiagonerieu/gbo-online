@@ -28,9 +28,9 @@ showPassword.addEventListener('click',()=>{
     // Mostra uma orientação JS icon-eye visible e hidden, indicando que o ícone de olho é clicável para mostrar ou ocultar a senha, alternando o tipo do campo de senha entre "password" e "text" e mudando a imagem do ícone de olho para refletir o estado atual (visível ou oculto).
     if (inputPassword.type === "password") {
         inputPassword.type = "text";
-        showPassword.style.backgroundImage = "url('../shared/icons/icon-eye-visible.svg')";
+        showPassword.style.backgroundImage = "url('../assets/icons/icon-eye-visible.svg')";
     } else {
         inputPassword.type = "password";
-        showPassword.style.backgroundImage = "url('../shared/icons/icon-eye-hidden.svg')";
+        showPassword.style.backgroundImage = "url('../assets/icons/icon-eye-hidden.svg')";
     }
 });

@@ -23,7 +23,7 @@
 h1 {
     font-family: 'titleFont', serif;
     font-size: var(--font-size-h1);
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 body {
