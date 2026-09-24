@@ -1,5 +1,5 @@
 # gbo-online
 
-Game Book Organizer
+Game Book Organiser
 
 gbo-online/
