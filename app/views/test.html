@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Vis-Network Tela Cheia e Responsivo</title>
+    <!-- Importação do vis-network via CDN -->
+    <script type="text/javascript" src="https://unpkg.com"></script>
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+
+        /* Container em tela cheia */
+        #meu-grafico {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Uma barra de ferramentas flutuante por cima do grafo */
+        .painel-controle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="painel-controle">
+        <button onclick="centralizarGrafo()">Centralizar Tudo</button>
+    </div>
+
+    <!-- Container do Grafo -->
+    <div id="meu-grafico"></div>
+
+    <script type="text/javascript">
+        // Dados fictícios para o grafo
+        var nodes = new vis.DataSet([
+            { id: 1, label: "Nó Central", color: "#4caf50" },
+            { id: 2, label: "Nó A" }, { id: 3, label: "Nó B" },
+            { id: 4, label: "Nó C" }, { id: 5, label: "Nó D" }
+        ]);
+
+        var edges = new vis.DataSet([
+            { from: 1, to: 2 }, { from: 1, to: 3 },
+            { from: 1, to: 4 }, { from: 1, to: 5 }
+        ]);
+
+        var container = document.getElementById("meu-grafico");
+        var data = { nodes: nodes, edges: edges };
+        
+        // Configurações básicas
+        var options = {
+            physics: {
+                stabilization: true // Evita que os nós fiquem pulando muito na tela cheia ao carregar
+            }
+        };
+
+        // Inicializa o grafo
+        var network = new vis.Network(container, data, options);
+
+        // --- MÁGICA DA RESPONSIVIDADE ---
+        window.addEventListener("resize", () => {
+            network.redraw(); // Recalcula o tamanho do Canvas
+            network.fit();    // Reajusta o zoom para caber tudo na nova tela
+        });
+
+        function centralizarGrafo() {
+            network.fit({ animation: { duration: 500 } });
+        }
+    </script>
+</body>
+</html>
