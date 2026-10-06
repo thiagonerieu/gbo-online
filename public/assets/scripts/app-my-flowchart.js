@@ -1,5 +1,5 @@
 // 1. create an array with nodes
-var nodes = new vis.DataSet([
+let nodes = new vis.DataSet([
     { id: 1, label: "1" },
     { id: 2, label: "2" },
     { id: 3, label: "3" },
@@ -15,7 +15,7 @@ var nodes = new vis.DataSet([
 ]);
 
 // 2. create an array with edges
-var edges = new vis.DataSet([
+let edges = new vis.DataSet([
     { from: 1, to: 3 },
     { from: 1, to: 2 },
     { from: 2, to: 1 },
@@ -32,12 +32,12 @@ var edges = new vis.DataSet([
 ]);
 
 // 3. create a network
-var container = document.getElementById("myflowchart");
-var data = {
+let container = document.getElementById("myflowchart");
+let data = {
     nodes: nodes,
     edges: edges,
 };
-var options = {
+let options = {
     // 1. Configurações globais para todos os NÓS (Nodes)
     nodes: {
         shape: "circle", // Formato do nó (ex: dot, box, circle)
@@ -89,7 +89,7 @@ var options = {
 };
 
 // 4. Inicializa o grafo aplicando as opções globais
-var network = new vis.Network(container, data, options);
+let network = new vis.Network(container, data, options);
 
 // Detecta clique simples em qualquer lugar do container
 network.on("click", function (params) {

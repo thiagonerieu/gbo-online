@@ -36,8 +36,18 @@ h2 {
 .ref-title-entry {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
 }
+
+.form-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+/* . form-input-ref-entry {
+    width: 10px;
+} */
 
 .choice-entry-ligne {
     display: flex;
