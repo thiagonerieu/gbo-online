@@ -1,17 +1,17 @@
 // 1. create an array with nodes
 let nodes = new vis.DataSet([
-    { id: 1, label: "1" },
-    { id: 2, label: "2" },
-    { id: 3, label: "3" },
-    { id: 4, label: "4" },
-    { id: 5, label: "5" },
-    { id: 6, label: "6" },
-    { id: 7, label: "7" },
-    { id: 8, label: "*8*" },
-    { id: 9, label: "*9*" },
+    { id: 1, label: "*01*" },
+    { id: 2, label: "02" },
+    { id: 3, label: "03" },
+    { id: 4, label: "04" },
+    { id: 5, label: "05" },
+    { id: 6, label: "06" },
+    { id: 7, label: "07" },
+    { id: 8, label: "08" },
+    { id: 9, label: "09" },
     { id: 10, label: "10" },
-    { id: 11, label: "*11*" },
-    { id: 12, label: "*12*" },
+    { id: 11, label: "11" },
+    { id: 12, label: "12" },
 ]);
 
 // 2. create an array with edges
@@ -41,18 +41,18 @@ let options = {
     // 1. Configurações globais para todos os NÓS (Nodes)
     nodes: {
         shape: "circle", // Formato do nó (ex: dot, box, circle)
-        size: 20,     // Tamanho dos nós
+        size: 64,     // Tamanho dos nós
         color: {
             background: "#334155",    // Cor de fundo padrão (Azul)
             border: "#E2E8F0",        // Cor da borda padrão
             highlight: {                // Cor quando o usuário clica
-                background: "#ffeb3b",
-                border: "#f57f17"
+                background: "#ff7b72",
+                border: "#E2E8F0"
             }
         },
         font: {
             color: "#E2E8F0", // Cor do texto do nó
-            size: 18,            // Tamanho da fonte            
+            size: 24,            // Tamanho da fonte            
             align: "center",
             multi: "md",     // Permite usar *negrito* no label de qualquer nó
         }
@@ -68,8 +68,8 @@ let options = {
             }
         },
         color: {
-            color: "#999999",     // Cor padrão da linha (Cinza)
-            highlight: "#ff0000", // Cor da linha quando selecionada (Vermelho)
+            color: "#E2E8F0",     // Cor padrão da linha (Cinza)
+            highlight: "#ff7b72", // Cor da linha quando selecionada (Vermelho)
             inherit: false        // Importante: false para a linha usar a própria cor e não herdar a cor do nó
         },
         smooth: {
@@ -108,19 +108,19 @@ network.on("click", function (params) {
 // Detecta clique duplo
 network.on("doubleClick", function (params) {
     if (params.nodes.length > 0) {
-        alert("Clique duplo no nó: " + params.nodes[0]);
+        alert("Clique duplo no nó: " + params.nodes[0]); // Abrir respectiva janela de entrada 
     }
 });
 
 // 🟢 ADICIONAR: Cria um novo nó e conecta ao nó 1
 function criarNovoNo() {
-    nodes.add({ id: 99, label: "Nó Novo", color: "#ff5722" });
+    nodes.add({ id: 99, label: "Nó Novo", color: "#334155" });
     edges.add({ from: 1, to: 99 });
 }
 
 // 🟡 ATUALIZAR: Muda a cor ou texto de um nó existente (obrigatório passar o id)
 function destacarNo(id) {
-    nodes.update({ id: id, color: { background: "#00ff00" }, font: { size: 20 } });
+    nodes.update({ id: id, color: { background: "#ff7b72" }, font: { size: 24 } });
 }
 
 // 🔴 REMOVER: Deleta o nó do grafo
