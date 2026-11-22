@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'titleFont';
+    src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bodyFont';
+    src: url('../fonts/open-sans/OpenSans-VariableFont-wdth-wght.ttf') format('truetype');
+    font-display: swap;
+}
+
 :root {
     --color-bg:                 #1E293B;
     --color-surface:            #334155;
@@ -20,6 +32,6 @@
     --font-size-h2:             1.4rem;
     --font-size-fields:         1.2rem;
     --font-size-body:           1rem;
-    --font-size-label:          0.9rem;
-    --font-size-placeholder:    0.9rem; 
+    --font-size-label:          1rem;
+    --font-size-placeholder:    1rem; 
 }

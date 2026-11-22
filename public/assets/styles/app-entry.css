@@ -1,5 +1,8 @@
+@import url(style.css);
+
 body.page-account .page-main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -11,7 +14,7 @@ body.page-my-account .form {
 .page-main {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 32px;
     border: 8px solid var(--color-border);
 }
 

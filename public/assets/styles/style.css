@@ -1,21 +1,9 @@
 @import url(variables.css);
 
-@font-face {
-    font-family: 'titleFont';
-    src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'bodyFont';
-    src: url('../fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-    font-display: swap;
-}
-
 /* === RESET / BASE === */
 *, *::before, *::after {
     box-sizing: border-box; 
-    /* Com border-box, o padding fica dentro da borda. O que você define é o tamanho final, sem surpresas. */
+    /* Com border-box, o padding fica dentro da borda. O que é definido é o tamanho final, sem surpresas. */
     margin: 0;
     padding: 0;
 }
