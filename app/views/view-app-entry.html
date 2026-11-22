@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GameBook Organiser - Entrada X</title>
-        <link rel="stylesheet" href="../../public/assets/styles/app-my-projects.css">
+        <link rel="stylesheet" href="../../public/assets/styles/app-entry.css">
     </head>
 <body class="page-my-projects">
 
     <header class="page-header">
         <img src="../../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
         <span class="project-title">Le Petit Chaperon Rouge</span>
-        <h1 class="page-title">Entrada X</h1>
+        <h1 class="page-title">Entrada X</h1> <!-- à remplacer par le titre de l'entrée -->
     </header>
     
     <main class="page-main">
@@ -19,10 +19,14 @@
         <div class="model-entry">
             <form action="#" method="post" class="form-entry">
                 <div class="ref-title-entry">
-                    <label>Ref. #</label>
-                    <input id="ref-entry" class="form-input form-input-ref-entry" type="text" name="ref">
-                    <label>Titre court</label>
-                    <input id="title-entry" class="form-input form-input-title-entry" type="text" name="title-entry">
+                    <div class="ref-title-entry-label">
+                        <label>Ref. #</label>
+                        <label>Titre court</label>]
+                    </div>
+                    <div class="ref-title-entry-input">
+                        <input id="ref-entry" class="form-input form-input-ref-entry" type="text" name="ref">
+                    
+                        <input id="title-entry" class="form-input form-input-title-entry" type="text" name="title-entry"></div>
                 </div>
                 <div class="note-entry">
                     <label>Note de l'auteur</label>
@@ -68,6 +72,6 @@
         </nav>
     </footer>
 
-    <script src="../../public/assets/scripts/app-my-projects.js"></script>
+    <script src="../../public/assets/scripts/app-entry.js"></script>
 </body>
 </html>

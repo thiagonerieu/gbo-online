@@ -12,7 +12,7 @@
     <?php
     echo "<h1>Bienvenue sur GameBook Organiser</h1>";
     ?>
-
+    
 </body>
 
 </html>

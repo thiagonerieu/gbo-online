@@ -1,17 +1,18 @@
 // 1. create an array with nodes
 let nodes = new vis.DataSet([
-    { id: 1, label: "*01*" },
-    { id: 2, label: "02" },
-    { id: 3, label: "03" },
-    { id: 4, label: "04" },
-    { id: 5, label: "05" },
-    { id: 6, label: "06" },
-    { id: 7, label: "07" },
-    { id: 8, label: "08" },
-    { id: 9, label: "09" },
-    { id: 10, label: "10" },
-    { id: 11, label: "11" },
-    { id: 12, label: "12" },
+    { id: 1, label: "*001*" },
+    { id: 2, label: "002" },
+    { id: 3, label: "003" },
+    { id: 4, label: "004" },
+    { id: 5, label: "005" },
+    { id: 6, label: "006" },
+    { id: 7, label: "007" },
+    { id: 8, label: "008" },
+    { id: 9, label: "009" },
+    { id: 10, label: "010" },
+    { id: 11, label: "011" },
+    { id: 12, label: "012" },
+    { id: 13, label: "013" }
 ]);
 
 // 2. create an array with edges
@@ -29,6 +30,7 @@ let edges = new vis.DataSet([
     { from: 5, to: 11 },
     { from: 8, to: 9 },
     { from: 8, to: 12 },
+    { from: 7, to: 13 }
 ]);
 
 // 3. create a network
@@ -39,9 +41,9 @@ let data = {
 };
 let options = {
     // 1. Configurações globais para todos os NÓS (Nodes)
-    nodes: {
+    nodes: { 
         shape: "circle", // Formato do nó (ex: dot, box, circle)
-        size: 64,     // Tamanho dos nós
+        size: 32,     // Tamanho dos nós
         color: {
             background: "#334155",    // Cor de fundo padrão (Azul)
             border: "#E2E8F0",        // Cor da borda padrão
@@ -57,7 +59,7 @@ let options = {
             multi: "md",     // Permite usar *negrito* no label de qualquer nó
         }
     },
-    
+
     // 2. Configurações globais para todas as LINHAS (Edges)
     edges: {
         arrows: {
@@ -68,8 +70,8 @@ let options = {
             }
         },
         color: {
-            color: "#E2E8F0",     // Cor padrão da linha (Cinza)
-            highlight: "#ff7b72", // Cor da linha quando selecionada (Vermelho)
+            color: "#E2E8F0",     // Cor padrão da linha
+            highlight: "#ff7b72", // Cor da linha quando selecionada
             inherit: false        // Importante: false para a linha usar a própria cor e não herdar a cor do nó
         },
         smooth: {
@@ -114,13 +116,26 @@ network.on("doubleClick", function (params) {
 
 // 🟢 ADICIONAR: Cria um novo nó e conecta ao nó 1
 function criarNovoNo() {
-    nodes.add({ id: 99, label: "Nó Novo", color: "#334155" });
-    edges.add({ from: 1, to: 99 });
+    nodes.add({ 
+        id: 999, 
+        label: "999", //Novo Nó
+    }); 
+    edges.add({ 
+        from: 1, 
+        to: 999 
+    });
 }
 
 // 🟡 ATUALIZAR: Muda a cor ou texto de um nó existente (obrigatório passar o id)
 function destacarNo(id) {
-    nodes.update({ id: id, color: { background: "#ff7b72" }, font: { size: 24 } });
+    nodes.update({ 
+        id: id, color: { 
+            background: "#ff7b72" 
+        }, 
+        font: { 
+            size: 24
+        } 
+    });
 }
 
 // 🔴 REMOVER: Deleta o nó do grafo
@@ -162,4 +177,5 @@ window.addEventListener("resize", () => {
     });
 });
 
+criarNovoNo()
 

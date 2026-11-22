@@ -14,12 +14,12 @@ body.page-my-account .form {
 .page-main {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 8px;
     border: 8px solid var(--color-border);
 }
 
-h1 {
-    padding-top: 4vh;
+h1 .project-title {
+    padding-top: 30px;
 }
 
 h2 {
@@ -31,16 +31,22 @@ h2 {
 .model-entry {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding-bottom: 4vh;
+    gap: 16px;
+    /* padding-bottom: 4vh; */
     /* border: 8px solid var(--color-border); */
 }
 
 .ref-title-entry {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
+}
+
+.ref-title-entry-label .ref-title-entry-input {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
 }
 
 .form-entry {
