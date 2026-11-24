@@ -81,7 +81,19 @@ h1 {
     gap: 16px;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { // tablets
     
-} */
+}
+
+@media screen and (min-width: 1024px) { // notebooks
+
+}
+
+@media screen and (min-width: 1280px) { // desktops
+
+}
+
+@media screen and (min-width: 1280px) { // grands écrans
+
+}
 

@@ -13,6 +13,7 @@
         <div id="myflowchart" class="myflowchart"></div>
         <script type="text/javascript" src="../public/assets/vendor/vis-network/vis-network.min.js"></script>
         <script src="../public/assets/scripts/app-my-flowchart.js"></script>
+
     </body>
 </html>
 </php>

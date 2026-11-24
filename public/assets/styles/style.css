@@ -250,19 +250,3 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 .footer-link:hover {
     color: var(--color-primary);
 }
-
-
-/* @media screen and (min-width: 768px) {
-
-}
-
-@media screen and (min-width: 1024px) {
-
-} */
-
-/* Esconde o elemento com classe sidebar — comum para liberar espaço horizontal em telas pequenas giradas. */
-/* @media screen and (orientation: landscape) {
-    .sidebar {
-        display: none;
-    }
-} */

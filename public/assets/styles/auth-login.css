@@ -1,6 +1,6 @@
 @import url(style.css);
 
-body.page-login .page-main {
+/* body.page-login .page-main {
     display: flex;
     justify-content: center;
 }
@@ -8,12 +8,27 @@ body.page-login .page-main {
 body.page-login .form {
     width: 100%;
     max-width: 420px;
+} */
+
+@media screen and (min-width: 768px) { // tablets
+    
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) { // notebooks
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) { // desktops
 
+}
+
+@media screen and (min-width: 1280px) { // grands écrans
+
+}
+
+/* Esconde o elemento com classe sidebar — comum para liberar espaço horizontal em telas pequenas giradas. */
+/* @media screen and (orientation: landscape) {
+    .sidebar {
+        display: none;
+    }
 } */

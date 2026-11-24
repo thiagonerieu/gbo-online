@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <div class="form-label-row">
                             <label class="form-label" for="login-password">Mot de passe</label>
-                            <a class="form-link" href="./auth-account-recovery.html">Mot de passe oublié ?</a>
+                            <a class="form-link" href="./auth-account-recovery.php">Mot de passe oublié ?</a>
                         </div>
                         <div class="form-input-wrapper">
                             <input id="login-password" class="form-input" type="password" name="password"  placeholder="Votre mot de passe ici..." required>
@@ -51,7 +51,7 @@
                     <img src="../public/assets/icons/icon-langue.svg" class="page-footer-icon" alt="icône des langues">
                 </a>
                 <p class="page-footer-signup">Pas encore de compte ? 
-                    <a class="footer-link" href="auth-signup.html">Créer un compte</a>
+                    <a class="footer-link" href="auth-signup.php">Créer un compte</a>
                 </p>
             </footer>
 
