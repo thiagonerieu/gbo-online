@@ -1,2 +1,4 @@
 config/config.php
-config/docs/gbo-mcd.lo1
+storage/*
+!storage/.gitkeep
+*.lo1

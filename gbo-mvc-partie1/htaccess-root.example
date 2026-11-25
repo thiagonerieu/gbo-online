@@ -1,0 +1,17 @@
+# À copier vers .htaccess à la RACINE du projet (en remplacement de l'actuel),
+# seulement si le serveur pointe sur la racine au lieu de public/.
+# Idéal : faire pointer le host virtuel sur public/ ; ce fichier est une 2e barrière.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Interdit l'accès aux dossiers et fichiers sensibles
+    RewriteRule ^(app|config|database|docs|storage|\.git)(/|$) - [F,L]
+    RewriteRule (^|/)\.(?!well-known) - [F,L]
+    RewriteRule \.(sql|md|lo1|loo|log)$ - [F,L]
+
+    # Sert tout le reste depuis public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
