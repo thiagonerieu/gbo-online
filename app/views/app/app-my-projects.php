@@ -40,7 +40,7 @@
                 </div>
             </main>
             
-            <?php require_once 'app-footer.php' ?>
+            <?php require_once 'views/app-footer.php' ?>
 
             <script src="../public/assets/scripts/app-my-projects.js"></script>
         </body>
