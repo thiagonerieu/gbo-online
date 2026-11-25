@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'titleFont';
-    src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/lora-variable.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'bodyFont';
-    src: url('../fonts/open-sans/OpenSans-VariableFont-wdth-wght.ttf') format('truetype');
+    src: url('../fonts/open-sans-variable.ttf') format('truetype');
     font-display: swap;
 }
 
