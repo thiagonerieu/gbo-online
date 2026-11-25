@@ -5,12 +5,12 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>GameBook Organiser - Compte</title>
-            <link rel="stylesheet" href="../public/assets/styles/app-my-account.css">
+            <link rel="stylesheet" href="../../../public/assets/styles/app-my-account.css">
         </head>
         <body class="page-my-account">
 
             <header class="page-header">
-                <img src="../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+                <img src="../../../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
                 <h1 class="page-title">Mon compte</h1>
             </header>
 
@@ -57,9 +57,9 @@
                 </div>
             </main>
             
-            <?php require_once 'views/app-footer.php' ?>
+            <?php require_once '../app-footer.php' ?>
 
-            <script src="../public/assets/scripts/app-my-account.js"></script>
+            <script src="../../../public/assets/scripts/app-my-account.js"></script>
         </body>
     </html>
 </php>

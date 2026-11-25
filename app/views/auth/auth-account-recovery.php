@@ -5,12 +5,12 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>GameBook Organiser - Récupération de compte</title>
-            <link rel="stylesheet" href="../public/assets/styles/auth-account-recovery.css">
+            <link rel="stylesheet" href="../../../public/assets/styles/auth-account-recovery.css">
         </head>
         <body class="page-account-recovery">
 
             <header class="page-header">
-                <img src="../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+                <img src="../../../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
                 <!-- <h1>Récupération de compte</h1> -->
             </header>
             <main class="page-main">
@@ -36,7 +36,7 @@
                 <!-- Falta criar a funcionalidade da troca de lingua.  -->
                 <!-- Pensar em adicionar aqui também o dark/ligth mode. -->
                 <a href="#" class="page-footer-icon-lang">
-                    <img src="../public/assets/icons/icon-langue.svg" class="page-footer-icon" alt="icône des langues">
+                    <img src="../../../public/assets/icons/icon-langue.svg" class="page-footer-icon" alt="icône des langues">
                 </a>
                 <p class="page-footer-signup">Pas encore de compte ? 
                     <a class="footer-link" href="auth-signup.php">Créer un compte</a>
@@ -44,7 +44,7 @@
                 <a class="footer-link" href="auth-login.php">Retour à la page de connexion</a>
             </footer>
 
-            <script src="../public/assets/scripts/auth-account-recovery.js"></script>
+            <script src="../../../public/assets/scripts/auth-account-recovery.js"></script>
         </body>
     </html>
 </php>

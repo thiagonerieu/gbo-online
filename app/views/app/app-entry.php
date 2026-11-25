@@ -6,13 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GameBook Organiser - Entrada X</title>
-        <link rel="stylesheet" href="../public/assets/styles/app-entry.css">
+        <link rel="stylesheet" href="../../../public/assets/styles/app-entry.css">
     </head>
 
     <body class="page-my-projects">
 
         <header class="page-header">
-            <img src="../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+            <img src="../../../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
             <span class="project-title">Le Petit Chaperon Rouge</span>
             <h1 class="page-title">Entrada X</h1> <!-- à remplacer par le titre de l'entrée -->
         </header>
@@ -56,9 +56,9 @@
 
         </main>
 
-        <?php require_once 'views/app-footer.php' ?>
+        <?php require_once '../app-footer.php' ?>
 
-        <script src="../public/assets/scripts/app-entry.js"></script>
+        <script src="../../../public/assets/scripts/app-entry.js"></script>
     </body>
 
     </html>

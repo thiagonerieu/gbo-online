@@ -5,12 +5,12 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>GameBook Organiser - Connexion</title>
-            <link rel="stylesheet" href="../public/assets/styles/auth-login.css">
+            <link rel="stylesheet" href="../../../public/assets/styles/auth-login.css">
         </head>
         <body class="page-login">
 
             <header class="page-header">
-                <img src="../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+                <img src="../../../public/assets/imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
                 <!-- <h1>Connecter compte</h1> -->
             </header>
             <main class="page-main">
@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <div class="form-label-row">
                             <label class="form-label" for="login-password">Mot de passe</label>
-                            <a class="form-link" href="./auth-account-recovery.php">Mot de passe oublié ?</a>
+                            <a class="form-link" href="auth-account-recovery.php">Mot de passe oublié ?</a>
                         </div>
                         <div class="form-input-wrapper">
                             <input id="login-password" class="form-input" type="password" name="password"  placeholder="Votre mot de passe ici..." required>
@@ -55,7 +55,7 @@
                 </p>
             </footer>
 
-            <script src="../public/assets/scripts/auth-login.js"></script>
+            <script src="../../../public/assets/scripts/auth-login.js"></script>
         </body>
     </html>
 </php>

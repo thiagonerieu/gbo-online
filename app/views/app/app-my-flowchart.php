@@ -6,13 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GameBook Organiser - Fluxograma</title>
-        <link rel="stylesheet" href="../public/assets/styles/app-my-flowchart.css">
+        <link rel="stylesheet" href="../../../public/assets/styles/app-my-flowchart.css">
     </head>
     
     <body>
         <div id="myflowchart" class="myflowchart"></div>
-        <script type="text/javascript" src="../public/assets/vendor/vis-network/vis-network.min.js"></script>
-        <script src="../public/assets/scripts/app-my-flowchart.js"></script>
+        <script type="text/javascript" src="../../../public/assets/vendor/vis-network/vis-network.min.js"></script>
+        <script src="../../../public/assets/scripts/app-my-flowchart.js"></script>
 
     </body>
 </html>
